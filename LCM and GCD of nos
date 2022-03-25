@@ -1,0 +1,45 @@
+# Python Program to find the L.C.M. of two input number
+
+def lcm(x, y):
+
+   # choose the greater number
+   if x > y:
+       greater = x
+   else:
+       greater = y
+
+   while(True):
+       if((greater % x == 0) and (greater % y == 0)):
+           lcm = greater
+           break
+       greater += 1
+
+   return lcm
+
+# find gcd of the numbers
+def gcd1(x,y):
+  i = 1
+  while(i <= x and i <= y):
+    if(x % i == 0 and y % i == 0):
+        gcd = i
+    i += 1
+  return gcd
+  
+
+# display result
+
+
+x = int(input('Enter First Number: '))
+y = int(input('Enter Second Number: '))
+
+print("The L.C.M. is", lcm(x, y))
+print("The G.C.D. is",gcd1(x,y))
+
+
+
+
+
+Enter First Number: 6
+Enter Second Number: 14
+The L.C.M. is 42
+The G.C.D. is 2
